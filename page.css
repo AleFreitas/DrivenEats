@@ -21,6 +21,7 @@
     height:100%;
     background-color: #ffffff;
     padding:14px;
+    border:none;
     border-radius:10px;
     margin-right:10px;
 }.item img{
