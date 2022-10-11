@@ -40,35 +40,35 @@
                     Primeiro, seu prato
                 </h1>
                 <div class="items">
-                    <button class="item">
+                    <button class="item" onclick="add_dish('Frango Yin Yang',14.90)">
                         <img src="images/dish1.png">
                         <h1>Frango Yin Yang</h1>
                         <p>Um pouco de batata, um pouco de salada</p>
                         <h2>R$ 14,90</h2>
                     </button>
-                    <button class="item">
+                    <button class="item" onclick="add_dish('Carne Yin Yang',19.50)">
                         <img src="images/dish1.png">
-                        <h1>Frango Yin Yang</h1>
+                        <h1>Carne Yin Yang</h1>
                         <p>Um pouco de batata, um pouco de salada</p>
-                        <h2>R$ 14,90</h2>
+                        <h2>R$ 18,50</h2>
                     </button>
-                    <button class="item">
+                    <button class="item" onclick="add_dish('Espaguete italiano',13.90)">
                         <img src="images/dish1.png">
-                        <h1>Frango Yin Yang</h1>
-                        <p>Um pouco de batata, um pouco de salada</p>
-                        <h2>R$ 14,90</h2>
+                        <h1>Espaguete italiano</h1>
+                        <p>Muito molho e um pouco de salada</p>
+                        <h2>R$ 13,90</h2>
                     </button>
-                    <button class="item">
+                    <button class="item" onclick="add_dish('Bife a bolonhesa',15.00)">
                         <img src="images/dish1.png">
-                        <h1>Frango Yin Yang</h1>
-                        <p>Um pouco de batata, um pouco de salada</p>
-                        <h2>R$ 14,90</h2>
+                        <h1>Bife a bolonhesa</h1>
+                        <p>Muito molho, um pouco de pimenta</p>
+                        <h2>R$ 15,00</h2>
                     </button>
-                    <button class="item">
+                    <button class="item" onclick="add_dish('Frango Yin Yang',14.90)">
                         <img src="images/dish1.png">
-                        <h1>Frango Yin Yang</h1>
-                        <p>Um pouco de batata, um pouco de salada</p>
-                        <h2>R$ 14,90</h2>
+                        <h1>Massa vegana</h1>
+                        <p>Combinação perfeita de massa e salada</p>
+                        <h2>R$ 23,00</h2>
                     </button>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                     Agora, sua bebida
                 </h1>
                 <div class="items">
-                    <button class="item">
+                    <button class="item" onclick="add_drink('Coquinha gelada',4.90)">
                         <img src="images/drink1.png">
                         <h1>Coquinha gelada</h1>
                         <p>Lata 350ml</p>
@@ -114,7 +114,7 @@
                     Por fim, sua sobremesa
                 </h1>
                 <div class="items">
-                    <button class="item">
+                    <button class="item" onclick="add_dessert('pudim',7.90)">
                         <img src="images/dessert1.png">
                         <h1>Pudim</h1>
                         <p>Apenas pudim</p>
@@ -149,11 +149,12 @@
         </div>
         <div class="bottom-fill"></div>
         <div class="bottom-menu">
-            <button class="order">
+            <button class="order" onclick="add_order()">
                 <p>
                     Selecione os 3 itens para fechar o pedido
                 </p>
             </button>
         </div>
+        <script src="scripts.js"></script>
     </body>
 </html>
