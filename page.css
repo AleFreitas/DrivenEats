@@ -11,7 +11,7 @@
     line-height: 32px;
 }.items{
     display:flex;
-    overflow:auto;
+    overflow-x: scroll;
     margin-top:10px;
 }.item{
     display:flex;
