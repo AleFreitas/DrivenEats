@@ -15,6 +15,7 @@
     scrollbar-width:none;
     margin-top:10px;
 }.item{
+    position:relative;
     display:flex;
     flex-direction:column;
     justify-content: space-between;
@@ -55,6 +56,7 @@
     height:90px;
 }.bottom-menu{
     position:fixed;
+    z-index: 2;
     bottom:0;
     left:0;
     height:90px;
@@ -75,4 +77,19 @@
     width: 364px;
     border-radius: 50px;
     background-color: #CBCBCB;
+}.selected{
+    padding:6px;
+    border:5px solid #32B72F;
+}.check{
+    position:absolute;
+    z-index:1;
+    top:89%;
+    right:7%;
+    height: 15.5px;
+    width: 15.5px;
+    color:#32B72F;
+}.item :nth-child(5){
+    display:none;
+}.selected :nth-child(5){
+    display:block;
 }
