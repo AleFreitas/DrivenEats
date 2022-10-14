@@ -12,6 +12,7 @@
 }.items{
     display:flex;
     overflow-x: scroll;
+    scrollbar-width:none;
     margin-top:10px;
 }.item{
     display:flex;
