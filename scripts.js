@@ -13,17 +13,14 @@ function add_dish(item_id,item_name,item_price){
     /*there is no chosen dishes */
     if (marked_dish == ""){
         /*toggles selected item*/
-        var dish_sel = document.querySelector("."+item_id);
-        dish_sel.classList.toggle("selected");
+        item_id.classList.toggle("selected");
         marked_dish = item_id;
     /*there is already one chosen dish */
     }else{
         /*toggles already marked dish*/
-        var previous_dish = document.querySelector("."+marked_dish);
-        previous_dish.classList.toggle("selected");
+        marked_dish.classList.toggle("selected");
         /*toggles new dish*/
-        var dish_sel = document.querySelector("."+item_id);
-        dish_sel.classList.toggle("selected");
+        item_id.classList.toggle("selected");
         /*new dish becomes marked_dish */
         marked_dish = item_id;
     }
@@ -43,17 +40,14 @@ function add_dish(item_id,item_name,item_price){
 function add_drink(item_id,item_name,item_price){
     /*there is no chosen drinks */
     if (marked_drink == ""){
-        var drink_sel = document.querySelector("."+item_id);
-        drink_sel.classList.toggle("selected");
+        item_id.classList.toggle("selected");
         marked_drink = item_id;
     /*there is already one chosen drink */    
     }else{
         /*toggles already marked drink*/
-        var previous_drink = document.querySelector("."+marked_drink);
-        previous_drink.classList.toggle("selected");
+        marked_drink.classList.toggle("selected");
         /*toggles new drink*/
-        var drink_sel = document.querySelector("."+item_id);
-        drink_sel.classList.toggle("selected");
+        item_id.classList.toggle("selected");
         /*new drink becomes marked_drink */
         marked_drink = item_id;
     }
@@ -73,17 +67,14 @@ function add_drink(item_id,item_name,item_price){
 function add_dessert(item_id,item_name,item_price){
     /*if : there is no chosen desserts */
     if (marked_dessert == ""){
-        var dessert_sel = document.querySelector("."+item_id);
-        dessert_sel.classList.toggle("selected");
+        item_id.classList.toggle("selected");
         marked_dessert = item_id;
     /*else : there is already one chosen dessert */
     }else{
         /*toggles already marked dessert*/
-        var previous_dessert = document.querySelector("."+marked_dessert);
-        previous_dessert.classList.toggle("selected");
+        marked_dessert.classList.toggle("selected");
         /*toggles new dessert*/
-        var dessert_sel = document.querySelector("."+item_id);
-        dessert_sel.classList.toggle("selected");
+        item_id.classList.toggle("selected");
         /*new dessert becomes marked_dessert */
         marked_dessert = item_id;
     }
