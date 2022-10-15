@@ -102,22 +102,22 @@ function add_order(){
         order_dish_name.innerHTML=order.dish[0];
         /*dish price*/
         let order_dish_price = document.querySelector(".order-dish :nth-child(2)");
-        order_dish_price.innerHTML = order.dish[1].toFixed(2);
+        order_dish_price.innerHTML = order.dish[1].toFixed(2).toString().replace(".",",");
         /*drink name */
         let order_drink_name = document.querySelector(".order-drink :nth-child(1)");
         order_drink_name.innerHTML = order.drink[0];
         /*drink price*/
         let order_drink_price = document.querySelector(".order-drink :nth-child(2)");
-        order_drink_price.innerHTML = order.drink[1].toFixed(2);
+        order_drink_price.innerHTML = order.drink[1].toFixed(2).toString().replace(".",",");
         /*dessert name */
         let order_dessert_name = document.querySelector(".order-dessert :nth-child(1)");
         order_dessert_name.innerHTML = order.dessert[0];
         /*dessert price*/
         let order_dessert_price = document.querySelector(".order-dessert :nth-child(2)");
-        order_dessert_price.innerHTML = order.dessert[1].toFixed(2);
+        order_dessert_price.innerHTML = order.dessert[1].toFixed(2).toString().replace(".",",");
         /*Altera o preco total*/
         let order_price = document.querySelector(".order-price :nth-child(2)");
-        order_price.innerHTML = "R$ " + order.price.toFixed(2);
+        order_price.innerHTML = "R$ " + order.price.toFixed(2).toString().replace(".",",");
     }
 }
 function cancel_order(){
