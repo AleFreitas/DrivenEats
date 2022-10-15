@@ -1,5 +1,5 @@
 /* order object will keep order information like chosen dish,drinks,etc*/
-var order = new Object();
+let order = new Object();
 order.dish=[];
 order.drink=[];
 order.dessert=[];
@@ -29,8 +29,8 @@ function add_dish(item_id,item_name,item_price){
     console.log(order);
     /*checking if 3 items have been chosen*/
     if (marked_dish != "" & marked_drink != "" & marked_dessert != ""){
-        var order_ready = document.querySelector(".order-disabled");
-        var order_text = document.querySelector(".order-disabled p");
+        let order_ready = document.querySelector(".order-disabled");
+        let order_text = document.querySelector(".order-disabled p");
         order_ready.classList.add("order-enabled");
         order_ready.classList.remove("order-disabled");
         order_text.innerHTML="Fechar pedido";
@@ -56,8 +56,8 @@ function add_drink(item_id,item_name,item_price){
     console.log(order);
     /*checking if 3 items have been chosen*/
     if (marked_dish != "" & marked_drink != "" & marked_dessert != ""){
-        var order_ready = document.querySelector(".order-disabled");
-        var order_text = document.querySelector(".order-disabled p");
+        let order_ready = document.querySelector(".order-disabled");
+        let order_text = document.querySelector(".order-disabled p");
         order_ready.classList.add("order-enabled");
         order_ready.classList.remove("order-disabled");
         order_text.innerHTML="Fechar pedido";
@@ -83,8 +83,8 @@ function add_dessert(item_id,item_name,item_price){
     console.log(order);
     /*checking if 3 items have been chosen*/
     if (marked_dish != "" & marked_drink != "" & marked_dessert != ""){
-        var order_ready = document.querySelector(".order-disabled");
-        var order_text = document.querySelector(".order-disabled p");
+        let order_ready = document.querySelector(".order-disabled");
+        let order_text = document.querySelector(".order-disabled p");
         order_ready.classList.add("order-enabled");
         order_ready.classList.remove("order-disabled");
         order_text.innerHTML="Fechar pedido";
@@ -95,7 +95,39 @@ function add_order(){
     /*checking if 3 items are marked before ending*/
     if (marked_dish != "" & marked_drink != "" & marked_dessert != ""){
         order.price = order.dish[1] + order.drink[1] + order.dessert[1];
-        console.log(order);
+        let order_finalized = document.querySelector(".order-confirmed-back");
+        order_finalized.classList.remove("hidden");
+        /*dish name */
+        let order_dish_name = document.querySelector(".order-dish :nth-child(1)");
+        order_dish_name.innerHTML=order.dish[0];
+        /*dish price*/
+        let order_dish_price = document.querySelector(".order-dish :nth-child(2)");
+        order_dish_price.innerHTML = order.dish[1].toFixed(2);
+        /*drink name */
+        let order_drink_name = document.querySelector(".order-drink :nth-child(1)");
+        order_drink_name.innerHTML = order.drink[0];
+        /*drink price*/
+        let order_drink_price = document.querySelector(".order-drink :nth-child(2)");
+        order_drink_price.innerHTML = order.drink[1].toFixed(2);
+        /*dessert name */
+        let order_dessert_name = document.querySelector(".order-dessert :nth-child(1)");
+        order_dessert_name.innerHTML = order.dessert[0];
+        /*dessert price*/
+        let order_dessert_price = document.querySelector(".order-dessert :nth-child(2)");
+        order_dessert_price.innerHTML = order.dessert[1].toFixed(2);
+        /*Altera o preco total*/
+        let order_price = document.querySelector(".order-price :nth-child(2)");
+        order_price.innerHTML = "R$ " + order.price.toFixed(2);
     }
+}
+function cancel_order(){
+    let order_finalized = document.querySelector(".order-confirmed-back");
+    order_finalized.classList.add("hidden");
+}
+function end_order(){
+    whatsapp_message = "Olá, gostaria de fazer o pedido:\n- Prato: " + order.dish[0] + "\n- Bebida: " + order.drink[0] + "\n- Sobremesa: " + order.dessert[0] + "\nTotal: R$ " + order.price.toFixed(2);
+    console.log(whatsapp_message);
+    whatsapp_link = "https://wa.me/5561981485621?text="+encodeURIComponent(whatsapp_message);
+    window.open(whatsapp_link);
 }
 

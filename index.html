@@ -170,6 +170,31 @@
                 </p>
             </button>
         </div>
+        <div class="order-confirmed-back hidden">
+            <div class="order-confirmed-front">
+                <div>Confirme seu pedido</div>
+                <div class="order-details">
+                    <div class="order-item order-dish">
+                        <p>item</p>
+                        <p>preco</p>
+                    </div>
+                    <div class="order-item order-drink">
+                        <p>item</p>
+                        <p>preco</p>
+                    </div>
+                    <div class="order-item order-dessert">
+                        <p>item</p>
+                        <p>preco</p>
+                    </div>
+                    <div class="order-price">
+                        <p>TOTAL</p>
+                        <p>PRECO</p>
+                    </div>
+                </div>
+                <button onclick="end_order()">Tudo certo, pode pedir!</button>
+                <button onclick="cancel_order()">Cancelar</button>
+            </div>
+        </div>
         <script src="scripts.js"></script>
         <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     </body>
