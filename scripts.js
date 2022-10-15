@@ -127,7 +127,7 @@ function cancel_order(){
 function end_order(){
     whatsapp_message = "Olá, gostaria de fazer o pedido:\n- Prato: " + order.dish[0] + "\n- Bebida: " + order.drink[0] + "\n- Sobremesa: " + order.dessert[0] + "\nTotal: R$ " + order.price.toFixed(2);
     console.log(whatsapp_message);
-    whatsapp_link = "https://wa.me/5561981485621?text="+encodeURIComponent(whatsapp_message);
+    whatsapp_link = "https://wa.me/5561981429388?text="+encodeURIComponent(whatsapp_message);
     window.open(whatsapp_link);
 }
 
